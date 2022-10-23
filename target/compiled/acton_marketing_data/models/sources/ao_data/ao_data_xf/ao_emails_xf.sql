@@ -23,7 +23,7 @@ SELECT
     SPLIT_PART(SPLIT_PART(clicked_url,'utm_content=',2),'&',1) AS content,
     clicked_url,
     clickthrough_link_name
-FROM "acton"."dbt_actonmarketing"."ao_emails"
+FROM "acton"."Postgres"."ao_emails"
 WHERE action = 'CLICKED'
 AND recipient_e_mail IS NOT null
 AND recipient_e_mail NOT LIKE 'unknown%'

@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."ao_forms_xf__dbt_tmp"
+  create  table "acton"."Postgres"."ao_forms_xf__dbt_tmp"
   as (
     
 
@@ -25,7 +27,8 @@ SELECT
 --Other Data
     ip_address,
     cookie_id
-FROM "acton"."dbt_actonmarketing"."ao_forms"
+FROM "acton"."Postgres"."ao_forms"
 WHERE email IS NOT null
 AND email NOT LIKE 'unknown%'
   );
+  

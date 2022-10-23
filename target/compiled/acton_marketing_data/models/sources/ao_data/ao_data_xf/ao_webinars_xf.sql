@@ -18,6 +18,6 @@ SELECT
 
 -- Other Data
     e_mail_domain AS email_domain
-FROM "acton"."dbt_actonmarketing"."ao_webinars"
+FROM "acton"."Postgres"."ao_webinars"
 WHERE contact_e_mail IS NOT null
 AND contact_e_mail NOT LIKE 'unknown%'

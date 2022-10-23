@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."ao_webinars_xf__dbt_tmp"
+  create  table "acton"."Postgres"."ao_webinars_xf__dbt_tmp"
   as (
     
 
@@ -22,7 +24,8 @@ SELECT
 
 -- Other Data
     e_mail_domain AS email_domain
-FROM "acton"."dbt_actonmarketing"."ao_webinars"
+FROM "acton"."Postgres"."ao_webinars"
 WHERE contact_e_mail IS NOT null
 AND contact_e_mail NOT LIKE 'unknown%'
   );
+  

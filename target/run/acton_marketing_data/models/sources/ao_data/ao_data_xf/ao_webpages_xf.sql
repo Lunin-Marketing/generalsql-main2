@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."ao_webpages_xf__dbt_tmp"
+  create  table "acton"."Postgres"."ao_webpages_xf__dbt_tmp"
   as (
     
 
@@ -30,6 +32,7 @@ SELECT
     cookie_id,
     ip_address,
     e_mail_domain AS email_domain
-FROM "acton"."dbt_actonmarketing"."ao_webpages"
+FROM "acton"."Postgres"."ao_webpages"
 WHERE contact_e_mail IS NOT null
   );
+  

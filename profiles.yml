@@ -10,7 +10,7 @@ deployment:
       host: "actonmarketing3.ccpllfcuzumj.us-west-2.rds.amazonaws.com"
       user: "postgres"
       pass: "Acton123!"
-      port: "5432"
+      port: 5432
       dbname: "acton"
       schema: "Postgres"
       threads: 5

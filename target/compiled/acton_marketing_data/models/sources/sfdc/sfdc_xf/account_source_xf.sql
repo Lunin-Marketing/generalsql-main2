@@ -112,19 +112,19 @@ FROM "acton"."salesforce"."account"
     FROM base
     LEFT JOIN "acton".salesforce."account" AS parent ON
     base.id=parent.parent_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."user_source_xf" AS sdr ON
+    LEFT JOIN "acton"."Postgres"."user_source_xf" AS sdr ON
     base.sdr_c=sdr.user_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."user_source_xf" AS csm ON
+    LEFT JOIN "acton"."Postgres"."user_source_xf" AS csm ON
     base.csm_c=csm.user_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."user_source_xf" AS account_owner ON
+    LEFT JOIN "acton"."Postgres"."user_source_xf" AS account_owner ON
     base.owner_id=account_owner.user_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."user_source_xf" AS onboarding ON
+    LEFT JOIN "acton"."Postgres"."user_source_xf" AS onboarding ON
     base.onboarding_specialist_c=onboarding.user_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."user_source_xf" AS deliverability ON
+    LEFT JOIN "acton"."Postgres"."user_source_xf" AS deliverability ON
     base.deliverability_consultant_c=deliverability.user_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."opp_source_xf" ON
+    LEFT JOIN "acton"."Postgres"."opp_source_xf" ON
     base.id=opp_source_xf.account_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."contract_source_xf" ON
+    LEFT JOIN "acton"."Postgres"."contract_source_xf" ON
     base.current_contract_c=contract_source_xf.contract_id
     group by 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66
 

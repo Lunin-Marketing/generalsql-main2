@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."lead_source_xf__dbt_tmp"
+  create  table "acton"."Postgres"."lead_source_xf__dbt_tmp"
   as (
     
 
@@ -125,7 +127,7 @@ FROM "acton"."salesforce"."lead"
         END AS global_region,
         COALESCE(account_c,lean_data_a_2_b_account_c) AS person_account_id
     FROM base
-    LEFT JOIN "acton"."dbt_actonmarketing"."user_source_xf" creator ON
+    LEFT JOIN "acton"."Postgres"."user_source_xf" creator ON
     base.created_by_id=creator.user_id
     WHERE base.owner_id != '00Ga0000003Nugr' -- AO-Fake Leads
 
@@ -141,3 +143,4 @@ CASE
 END AS segment
 FROM final
   );
+  

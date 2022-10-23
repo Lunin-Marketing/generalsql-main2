@@ -19,6 +19,6 @@ SELECT
     cookie_id,
     ip_address,
     e_mail_domain AS email_domain
-FROM "acton"."dbt_actonmarketing"."ao_media"
+FROM "acton"."Postgres"."ao_media"
 WHERE e_mail_address IS NOT null
 AND e_mail_address NOT LIKE 'unknown%'

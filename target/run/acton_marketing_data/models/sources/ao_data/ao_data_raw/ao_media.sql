@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."ao_media__dbt_tmp"
+  create  table "acton"."Postgres"."ao_media__dbt_tmp"
   as (
     
 
@@ -14,3 +16,4 @@ WITH base AS (
 SELECT *
 FROM base
   );
+  

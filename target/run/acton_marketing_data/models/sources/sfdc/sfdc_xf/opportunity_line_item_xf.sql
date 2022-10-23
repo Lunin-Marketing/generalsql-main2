@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."opportunity_line_item_xf__dbt_tmp"
+  create  table "acton"."Postgres"."opportunity_line_item_xf__dbt_tmp"
   as (
     
 
@@ -41,3 +43,4 @@ FROM "acton"."salesforce"."opportunity_line_item"
 SELECT *
 FROM final
   );
+  

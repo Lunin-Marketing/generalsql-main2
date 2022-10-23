@@ -3,27 +3,27 @@
 WITH ao_combined AS (
 
    SELECT *
-   FROM "acton"."dbt_actonmarketing"."ao_combined" 
+   FROM "acton"."Postgres"."ao_combined" 
 
 ), lead_creation AS (
 
     SELECT *
-    FROM "acton"."dbt_actonmarketing"."lead_creation2"
+    FROM "acton"."Postgres"."lead_creation2"
 
 ), first_touch AS (
 
     SELECT *
-    FROM "acton"."dbt_actonmarketing"."first_touch2"
+    FROM "acton"."Postgres"."first_touch2"
 
 ), last_touch AS (
 
     SELECT *
-    FROM "acton"."dbt_actonmarketing"."last_touch"
+    FROM "acton"."Postgres"."last_touch"
 
 ), opportunity_creation AS (
 
     SELECT *
-    FROM "acton"."dbt_actonmarketing"."opportunity_creation2"
+    FROM "acton"."Postgres"."opportunity_creation2"
 
 ), linear_base AS (
 
@@ -173,7 +173,7 @@ WITH ao_combined AS (
     FROM ao_combined
     LEFT JOIN final_prep ON
     ao_combined.touchpoint_id=final_prep.touchpoint_id
-    LEFT JOIN "acton"."dbt_actonmarketing"."lead_to_cw_cohort" ON
+    LEFT JOIN "acton"."Postgres"."lead_to_cw_cohort" ON
     ao_combined.email=lead_to_cw_cohort.email
     LEFT JOIN lead_creation ON 
     ao_combined.touchpoint_id=lead_creation.touchpoint_id

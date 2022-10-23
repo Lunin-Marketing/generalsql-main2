@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."contract_source_xf__dbt_tmp"
+  create  table "acton"."Postgres"."contract_source_xf__dbt_tmp"
   as (
     
 
@@ -43,3 +45,4 @@ SELECT
 *
 FROM final
   );
+  

@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."quote_line__dbt_tmp"
+  create  table "acton"."Postgres"."quote_line__dbt_tmp"
   as (
     
 
@@ -35,7 +37,7 @@ WITH base AS (
     FROM base
     LEFT JOIN "acton".salesforce."sbqq_quote_c" ON
     base.id=sbqq_quote_c.id
-    LEFT JOIN "acton"."dbt_actonmarketing"."product_xf" ON
+    LEFT JOIN "acton"."Postgres"."product_xf" ON
     base.sbqq_product_c=product_xf.product_id
 
 )   
@@ -43,3 +45,4 @@ WITH base AS (
 SELECT *
 FROM final
   );
+  

@@ -21,6 +21,6 @@ SELECT
 --Other Data
     ip_address,
     cookie_id
-FROM "acton"."dbt_actonmarketing"."ao_forms"
+FROM "acton"."Postgres"."ao_forms"
 WHERE email IS NOT null
 AND email NOT LIKE 'unknown%'

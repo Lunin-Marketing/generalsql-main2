@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."user_source_xf__dbt_tmp"
+  create  table "acton"."Postgres"."user_source_xf__dbt_tmp"
   as (
     
 
@@ -39,3 +41,4 @@ FROM "acton"."salesforce"."user"
         photo_c AS user_photo
 FROM base
   );
+  

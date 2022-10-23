@@ -1,6 +1,8 @@
 
+  
+    
 
-  create  table "acton"."dbt_actonmarketing"."product_xf__dbt_tmp"
+  create  table "acton"."Postgres"."product_xf__dbt_tmp"
   as (
     
 
@@ -29,3 +31,4 @@ WITH base AS (
 SELECT *
 FROM final
   );
+  
